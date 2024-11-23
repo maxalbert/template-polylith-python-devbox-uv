@@ -7,7 +7,8 @@
   "shell": {
     "init_hook": [
       ". $VENV_DIR/bin/activate",
-      "export UV_PYTHON=$VENV_DIR/bin/python"
+      "export UV_PYTHON=$VENV_DIR/bin/python",
+      "uv sync",
     ],
     "scripts": {
       "test": [
