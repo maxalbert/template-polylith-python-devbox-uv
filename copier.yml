@@ -6,6 +6,7 @@ project_name:
 description:
     type: str
     help: Short description of the project
+    default: My awesome project
 
 #module_name:
 #    type: str
