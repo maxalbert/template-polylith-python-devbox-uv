@@ -13,6 +13,11 @@ pymodule_name:
     help: What is your Python module name?
     default: "{{ project_name | lower | replace('-', '_') | replace(' ', '_') }}"
 
+polylith_namespace:
+    type: str
+    help: Polylith workspace name
+    default: "{{ pymodule_name }}"
+
 python_version:
     type: str
     help: Python version required by your project
