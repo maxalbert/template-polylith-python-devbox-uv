@@ -15,6 +15,11 @@ dev = [
 requires = ["hatchling", "hatch-polylith-bricks"]
 build-backend = "hatchling.build"
 
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
 [tool.hatch.build]
 dev-mode-dirs = ["components", "bases", "development", "."]
 
