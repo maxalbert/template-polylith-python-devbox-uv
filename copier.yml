@@ -26,6 +26,4 @@ python_version:
 
 _tasks:
     - "devbox run uv sync"
-    - "git init"
-    - "git add ."
-    - "git commit -m 'Initial commit'"
+    - [bash, "-c", "test -e .git || (git init && git add . && git commit -m 'Initial commit')"]
