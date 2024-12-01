@@ -22,3 +22,9 @@ python_version:
     type: str
     help: Python version required by your project
     default: 3.12
+
+
+_tasks:
+    - "git init"
+    - "git add ."
+    - "git commit -m 'Initial commit'"
