@@ -1,5 +1,6 @@
 .copier-answers.yml
 .devbox
 
+.coverage
 __pycache__
 *.pyc
