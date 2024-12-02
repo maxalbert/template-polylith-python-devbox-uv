@@ -58,6 +58,54 @@
         }
       }
     },
+    "treefmt@latest": {
+      "last_modified": "2024-06-12T20:55:33Z",
+      "resolved": "github:NixOS/nixpkgs/a9858885e197f984d92d7fe64e9fff6b2e488d40#treefmt",
+      "source": "devbox-search",
+      "version": "0.6.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gjkn54325rmy4cmn6z5fy244bakrx3lx-treefmt-0.6.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gjkn54325rmy4cmn6z5fy244bakrx3lx-treefmt-0.6.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4yv88c7w2rjixf158q6fyjy1rqfz57nx-treefmt-0.6.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/4yv88c7w2rjixf158q6fyjy1rqfz57nx-treefmt-0.6.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xr5l182bdzmdy13la0819bj1n59v7r7l-treefmt-0.6.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xr5l182bdzmdy13la0819bj1n59v7r7l-treefmt-0.6.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/g0kszr3kddvykhqircl5dm438h22661a-treefmt-0.6.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/g0kszr3kddvykhqircl5dm438h22661a-treefmt-0.6.1"
+        }
+      }
+    },
     "uv@latest": {
       "last_modified": "2024-11-16T04:25:12Z",
       "resolved": "github:NixOS/nixpkgs/34a626458d686f1b58139620a8b2793e9e123bba#uv",
