@@ -1,6 +1,6 @@
 import pytest
 
-from pyqcrbox.logging import configure_structlog
+from {{ pymodule_name }}.logging import configure_structlog
 
 
 @pytest.fixture(scope="session", autouse=True)
