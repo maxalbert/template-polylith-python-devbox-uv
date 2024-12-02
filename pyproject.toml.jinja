@@ -29,5 +29,10 @@ dev-mode-dirs = ["components", "bases", "development", "."]
 
 [tool.pytest.ini_options]
 addopts = [
+    "--capture=no",
+    "--verbose",
+    "--exitfirst",
     "--import-mode=importlib",
+    "--cov={{ pymodule_name }}",
+    "--cov-report=term-missing",
 ]
