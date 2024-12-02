@@ -1,0 +1,11 @@
+[formatter.ruff-check]
+command = "ruff"
+options = ["check", "--fix"]
+excludes = []
+includes = ["*.py", "*.pyi"]
+
+[formatter.ruff-format]
+command = "ruff"
+options = ["format"]
+excludes = []
+includes = ["*.py", "*.pyi"]
