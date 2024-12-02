@@ -1,9 +1,10 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from {{ pymodule_name }}.settings.base import SettingsBaseModel
 from {{ pymodule_name }}.settings.logging import LoggingSettings
 
 
-class Settings(BaseSettings):
+class Settings(SettingsBaseModel):
     logging: LoggingSettings = LoggingSettings()
 
 
