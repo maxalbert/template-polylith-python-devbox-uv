@@ -18,6 +18,11 @@ polylith_namespace:
     help: Polylith workspace name
     default: "{{ pymodule_name }}"
 
+cli_tool_name:
+    type: str
+    help: Name of the command line tool for this project
+    default: "{{ pymodule_name }}-cli"
+
 env_vars_prefix:
     type: str
     help: Prefix for project-related environment variables
