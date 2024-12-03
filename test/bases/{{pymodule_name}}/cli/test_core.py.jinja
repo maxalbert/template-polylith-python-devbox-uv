@@ -1,0 +1,23 @@
+import textwrap
+
+from click.testing import CliRunner
+
+from {{pymodule_name}}.cli import cli_entrypoint
+
+
+def test_cli_without_arguments():
+    runner = CliRunner()
+    result = runner.invoke(cli_entrypoint)
+
+    expected_output = textwrap.dedent(
+        """\
+        Usage: {{ cli_tool_name }} [OPTIONS] COMMAND [ARGS]...
+
+          Command line interface for {{ project_name }}.
+
+        Options:
+          -h, --help  Show this message and exit.
+        """)
+
+    print(result.output)
+    assert result.output == expected_output

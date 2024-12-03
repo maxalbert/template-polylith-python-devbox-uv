@@ -1,0 +1,13 @@
+import click
+
+CONTEXT_SETTINGS = {
+    "help_option_names": ["-h", "--help"],
+}
+
+
+@click.group(name="{{ cli_tool_name }}", context_settings=CONTEXT_SETTINGS)
+def cli_entrypoint():
+    """
+    Command line interface for {{ project_name }}.
+    """
+    pass  # pragma: no cover
