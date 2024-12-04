@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling", "hatch-polylith-bricks"]
+build-backend = "hatchling.build"
+
+[project]
+name = "{{ pymodule_name }}_cli"
+version = "0.1.0"
+
+requires-python = ">={{ python_version }}"
+
+dependencies = []
+
+[project.scripts]
+{{ cli_tool_name }} = "{{ pymodule_name }}.cli:cli_entrypoint"
+
+# This section is needed for building
+[tool.hatch.build.targets.wheel]
+packages = ["{{ pymodule_name }}"]
+
+[tool.hatch.build.hooks.polylith-bricks]
+# This section is needed to enable the hook in the build process, even if empty.
+
+[tool.polylith.bricks]
+"../../bases/{{ polylith_namespace }}/my_base" = "{{ polylith_namespace }}/cli"

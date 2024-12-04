@@ -17,6 +17,7 @@ polylith_namespace:
     type: str
     help: Polylith workspace name
     default: "{{ pymodule_name }}"
+    when: false  # This makes sure the value is derived from `pymodule_name` but not asked nor stored
 
 env_vars_prefix:
     type: str
