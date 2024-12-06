@@ -2,7 +2,8 @@ import textwrap
 
 from click.testing import CliRunner
 
-from {{pymodule_name}}.cli import cli_entrypoint
+from {{ pymodule_name }}.cli import cli_entrypoint
+from {{ pymodule_name }}.version import __version__
 
 
 def test_cli_without_arguments():
@@ -17,7 +18,17 @@ def test_cli_without_arguments():
 
         Options:
           -h, --help  Show this message and exit.
+
+        Commands:
+          version  Print the current version.
         """)
 
     print(result.output)
     assert result.output == expected_output
+
+
+def test_version():
+    runner = CliRunner()
+    result = runner.invoke(cli_entrypoint, "version")
+
+    assert result.output.strip() == __version__
