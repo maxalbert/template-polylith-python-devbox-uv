@@ -24,10 +24,16 @@ env_vars_prefix:
     help: Prefix for project-related environment variables
     default: "{{ pymodule_name | upper }}"
 
+enable_cli:
+    type: bool
+    help: Do you want to include scaffolding for CLI support?
+    default: true
+
 cli_tool_name:
     type: str
     help: Name of the command line tool for this project
     default: "{{ pymodule_name }}-cli"
+    when: "{{ enable_cli }}"
 
 python_version:
     type: str
