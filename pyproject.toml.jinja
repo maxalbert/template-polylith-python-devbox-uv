@@ -20,6 +20,7 @@ dev = [
     "rich>=13.9.4",
     "ruff>=0.8.1",
     "setuptools-scm>=8.1.0",
+    "{{ pymodule_name }}-cli",
 ]
 
 [build-system]
@@ -50,3 +51,6 @@ ignore = ["E712"]
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["E402", "F401"]  # ignore `E402` (import violations) and `F401` (unused variables) in all `__init__.py` files
+
+[tool.uv.sources]
+{{ pymodule_name }}-cli = { path = "projects/{{ pymodule_name }}_cli" }
