@@ -1,6 +1,5 @@
 [project]
 name = "{{ pymodule_name }}"
-version = "0.1.0"
 description = "{{ description }}"
 readme = "README.md"
 requires-python = ">={{ python_version }}"
@@ -8,6 +7,7 @@ dependencies = [
     "pydantic-settings>=2.6.1",
     "structlog>=24.4.0",
 ]
+dynamic = ["version"]
 
 [dependency-groups]
 dev = [
@@ -19,14 +19,21 @@ dev = [
     "pytest>=8.3.4",
     "rich>=13.9.4",
     "ruff>=0.8.1",
+    "setuptools-scm>=8.1.0",
 ]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
 
 [tool.hatch.build]
 dev-mode-dirs = ["components", "bases", "development", "."]
+
+[tool.hatch.build.hooks.vcs]
+version-file = "components/{{ pymodule_name }}/version/_version.py"
 
 [tool.pytest.ini_options]
 addopts = [
@@ -42,4 +49,4 @@ addopts = [
 ignore = ["E712"]
 
 [tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["E402"]  # ignore `E402` (import violations) in all `__init__.py` files
+"__init__.py" = ["E402", "F401"]  # ignore `E402` (import violations) and `F401` (unused variables) in all `__init__.py` files

@@ -2,5 +2,6 @@
 .devbox
 
 .coverage
+_version.py
 __pycache__
 *.pyc
