@@ -35,6 +35,8 @@ python_version:
     default: 3.12
 
 
+_templates_suffix: ""
+
 _tasks:
     - "test -e .git || ( git init && git add . && git commit -m 'Initial commit' )"
     - "devbox run uv sync && git add uv.lock && git commit --amend --no-edit uv.lock"
