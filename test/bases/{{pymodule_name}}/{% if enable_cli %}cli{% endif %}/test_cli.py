@@ -23,7 +23,6 @@ def test_cli_without_arguments():
           version  Print the current version.
         """)
 
-    print(result.output)
     assert result.output == expected_output
 
 
