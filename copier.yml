@@ -39,6 +39,7 @@ python_version:
     type: str
     help: Python version required by your project
     default: 3.12
+    when: false
 
 
 _templates_suffix: ""
