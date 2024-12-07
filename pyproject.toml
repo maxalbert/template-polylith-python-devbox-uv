@@ -4,6 +4,7 @@ description = "{{ description }}"
 readme = "README.md"
 requires-python = ">={{ python_version }}"
 dependencies = [
+    "litestar>=2.13.0",
     "pydantic-settings>=2.6.1",
     "structlog>=24.4.0",
 ]
