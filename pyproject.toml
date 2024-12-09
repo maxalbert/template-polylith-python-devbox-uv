@@ -17,6 +17,7 @@ dynamic = ["version"]
 {% endif %}
 [dependency-groups]
 dev = [
+    "anyio>=4.7.0",
     "ipdb>=0.13.13",
     "ipython>=8.30.0",
     "mypy>=1.13.0",
