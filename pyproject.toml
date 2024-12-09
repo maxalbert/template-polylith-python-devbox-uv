@@ -57,3 +57,12 @@ ignore = ["E712"]
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["E402", "F401"]  # ignore `E402` (import violations) and `F401` (unused variables) in all `__init__.py` files
+
+[tool.mypy]
+mypy_path = "components, bases"
+namespace_packages = true
+explicit_package_bases = true
+
+[[tool.mypy.overrides]]
+module = "setuptools_scm"
+ignore_missing_imports = true
