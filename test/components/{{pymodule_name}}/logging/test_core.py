@@ -1,9 +1,11 @@
+from typing import Any
+
 from structlog.testing import capture_logs
 
 from {{ pymodule_name }}.logging import structlog_logger
 
 
-def test_structlog_logger():
+def test_structlog_logger() -> None:
     expected_output = [{"answer": 42, "event": "Hello, world!", "log_level": "info"}]
 
     with capture_logs() as cap_logs:
@@ -11,7 +13,7 @@ def test_structlog_logger():
         assert cap_logs == expected_output
 
 
-def test_structlog_logger_v2(capsys):
+def test_structlog_logger_v2(capsys: Any) -> None:
     structlog_logger.info("Hello, %s!", "world", answer=42)
     captured = capsys.readouterr()
     output = captured.out.strip()

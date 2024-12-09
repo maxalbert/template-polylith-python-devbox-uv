@@ -6,7 +6,7 @@ from {{ pymodule_name }}.cli import cli_entrypoint
 from {{ pymodule_name }}.version import __version__
 
 
-def test_cli_without_arguments():
+def test_cli_without_arguments() -> None:
     runner = CliRunner()
     result = runner.invoke(cli_entrypoint)
 
@@ -27,7 +27,7 @@ def test_cli_without_arguments():
     assert result.output == expected_output
 
 
-def test_version():
+def test_version() -> None:
     runner = CliRunner()
     result = runner.invoke(cli_entrypoint, "version")
 

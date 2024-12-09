@@ -3,7 +3,7 @@ import structlog
 from {{ pymodule_name }}.settings import settings
 
 
-def configure_structlog(use_colors: bool | None = None):
+def configure_structlog(use_colors: bool | None = None) -> None:
     if use_colors is None:
         use_colors = settings.logging.use_colors
 

@@ -9,7 +9,7 @@ CONTEXT_SETTINGS = {
 
 
 @click.group(name="{{ cli_tool_name }}", context_settings=CONTEXT_SETTINGS)
-def cli_entrypoint():
+def cli_entrypoint() -> None:
     """
     Command line interface for {{ project_name }}.
     """
