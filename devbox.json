@@ -18,8 +18,8 @@
       "lint": [
         "mypy --strict .",
       ],
-      "server": [
-        "litestar run",
+      "devserver": [
+        "litestar run --debug --reload",
       ],
       "tree": [
         "tree -I '*.pyc' -I '__pycache__'",
