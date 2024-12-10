@@ -35,6 +35,11 @@ cli_tool_name:
     default: "{{ pymodule_name }}-cli"
     when: "{{ enable_cli }}"
 
+enable_server:
+    type: bool
+    help: Do you want to include a server component?
+    default: true
+
 python_version:
     type: str
     help: Python version required by your project

@@ -5,6 +5,11 @@
     "uv@latest",
     "treefmt@latest",
   ],
+  "env": {
+    {% if enable_server %}
+    "LITESTAR_APP": "{{ pymodule_name }}.server:app",
+    {% endif %}
+  },
   "shell": {
     "init_hook": [
       ". $VENV_DIR/bin/activate",
