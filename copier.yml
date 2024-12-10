@@ -47,5 +47,5 @@ _templates_suffix: ""
 _tasks:
     - "test -e .git || ( git init && git add . && git commit -m 'Initial commit' )"
     - "devbox run uv sync && git add uv.lock && git commit --amend --no-edit uv.lock"
-    - "git tag v0.1.0"
+    - "test -n '$(git tag --list v0.1.0)' || ( echo 'Creating initial tag v0.1.0' && git tag v0.1.0 )"
     - "devbox run pre-commit install"
