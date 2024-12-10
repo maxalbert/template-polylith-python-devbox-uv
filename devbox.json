@@ -6,9 +6,7 @@
     "treefmt@latest",
   ],
   "env": {
-    {% if enable_server %}
     "LITESTAR_APP": "{{ pymodule_name }}.server:app",
-    {% endif %}
   },
   "shell": {
     "init_hook": [
@@ -17,6 +15,9 @@
       "uv sync",
     ],
     "scripts": {
+      "server": [
+        "litestar run",
+      ],
       "tree": [
         "tree -I '*.pyc' -I '__pycache__'",
       ],
