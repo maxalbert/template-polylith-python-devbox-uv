@@ -25,7 +25,7 @@
         "tree -I '*.pyc' -I '__pycache__'",
       ],
       "test": [
-        "echo \"Error: no test specified\" && exit 1",
+        "pytest",
       ]
     }
   }
