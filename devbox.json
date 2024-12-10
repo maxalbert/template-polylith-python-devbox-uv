@@ -15,6 +15,9 @@
       "uv sync",
     ],
     "scripts": {
+      "lint": [
+        "mypy --strict .",
+      ],
       "server": [
         "litestar run",
       ],
