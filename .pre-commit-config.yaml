@@ -9,11 +9,14 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v1.13.0"
+  - repo: local
     hooks:
       - id: mypy
-        args: [--strict, --ignore-missing-imports]
+        name: mypy
+        entry: "mypy --strict"
+        language: system
+        types: [python]
+        require_serial: true
 
   - repo: local
     hooks:
