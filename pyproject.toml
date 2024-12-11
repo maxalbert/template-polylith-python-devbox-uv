@@ -7,6 +7,7 @@ dependencies = [
     "litestar[standard]>=2.13.0",
     "pydantic-settings>=2.6.1",
     "structlog>=24.4.0",
+    "svcs>=24.1.0",
 ]
 dynamic = ["version"]
 
