@@ -6,4 +6,6 @@ async def health_check() -> str:
     return "healthy"
 
 
-app = Litestar(route_handlers=[health_check])
+def create_server_app():
+    app = Litestar(route_handlers=[health_check])
+    return app

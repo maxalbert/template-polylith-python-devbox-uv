@@ -1,3 +1,3 @@
-from {{ pymodule_name }}.server.core import app
+from {{ pymodule_name }}.server.core import create_server_app
 
-__all__ = ["app"]
+__all__ = ["create_server_app"]
