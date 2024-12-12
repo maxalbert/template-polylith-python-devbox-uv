@@ -6,6 +6,6 @@ includes = ["*.py", "*.pyi"]
 
 [formatter.ruff-format]
 command = "ruff"
-options = ["format"]
+options = ["format", "--line-length=120"]
 excludes = []
 includes = ["*.py", "*.pyi"]
