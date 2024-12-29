@@ -67,3 +67,11 @@ explicit_package_bases = true
 [[tool.mypy.overrides]]
 module = "setuptools_scm"
 ignore_missing_imports = true
+
+[tool.polylith.bricks]
+"bases/{{ pymodule_name }}/cli" = "{{ pymodule_name }}/cli"
+"bases/{{ pymodule_name }}/server" = "{{ pymodule_name }}/server"
+"components/{{ pymodule_name }}/logging" = "{{ pymodule_name }}/logging"
+"components/{{ pymodule_name }}/services" = "{{ pymodule_name }}/services"
+"components/{{ pymodule_name }}/version" = "{{ pymodule_name }}/version"
+"components/{{ pymodule_name }}/settings" = "{{ pymodule_name }}/settings"

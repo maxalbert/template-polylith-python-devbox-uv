@@ -8,7 +8,10 @@ version = "0.1.0"
 
 requires-python = ">={{ python_version }}"
 
-dependencies = []
+dependencies = [
+  "click>=8.1.8",
+  "setuptools-scm>=8.1.0",
+]
 
 [project.scripts]
 {{ cli_tool_name }} = "{{ pymodule_name }}.cli:cli_entrypoint"
@@ -22,3 +25,4 @@ packages = ["{{ pymodule_name }}"]
 
 [tool.polylith.bricks]
 "../../bases/{{ polylith_namespace }}/cli" = "{{ polylith_namespace }}/cli"
+"../../components/{{ polylith_namespace }}/version" = "{{ polylith_namespace }}/version"
