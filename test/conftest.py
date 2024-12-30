@@ -3,6 +3,7 @@ from collections.abc import AsyncIterator
 
 import pytest
 
+from litestar import Litestar
 from litestar.testing import AsyncTestClient
 
 from {{ pymodule_name }}.logging import configure_structlog
