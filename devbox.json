@@ -21,12 +21,15 @@
       "devserver": [
         "litestar run --debug --reload",
       ],
-      "tree": [
-        "tree -I '*.pyc' -I '__pycache__'",
+      "dev-notebooks": [
+        "jupyter lab --notebook-dir=development",
       ],
       "test": [
         "pytest",
-      ]
+      ],
+      "tree": [
+        "tree -I '*.pyc' -I '__pycache__'",
+      ],
     }
   }
 }
