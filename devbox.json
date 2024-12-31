@@ -22,7 +22,7 @@
         "litestar run --debug --reload",
       ],
       "dev-notebooks": [
-        "jupyter lab --notebook-dir=development",
+        "devbox services up -b jupterlab-dev",
       ],
       "test": [
         "pytest",
