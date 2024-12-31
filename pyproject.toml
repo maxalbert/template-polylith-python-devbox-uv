@@ -20,6 +20,7 @@ dev = [
     "anyio>=4.7.0",
     "ipdb>=0.13.13",
     "ipython>=8.30.0",
+    "jupyterlab>=4.3.4",
     "mypy>=1.13.0",
     "polylith-cli>=1.22.0",
     "pre-commit>=4.0.1",
