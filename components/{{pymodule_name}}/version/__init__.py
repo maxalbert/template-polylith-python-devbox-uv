@@ -1,14 +1,17 @@
 # Source: https://github.com/maresb/hatch-vcs-footgun-example/
 
+__all__ = ["__version__"]
+
+
 # Define the variable '__version__':
 try:
     # If setuptools_scm is installed (e.g. in a development environment with
     # an editable install), then use it to determine the version dynamically.
-    from setuptools_scm import get_version
+    import setuptools_scm
 
     # This will fail with LookupError if the package is not installed in
     # editable mode or if Git is not installed.
-    __version__ = get_version(root="../../..", relative_to=__file__)
+    __version__ = setuptools_scm.get_version(root="../../..", relative_to=__file__)
 except (ImportError, LookupError):  # pragma: no cover
     # As a fallback, use the version that is hard-coded in the file.
     try:
