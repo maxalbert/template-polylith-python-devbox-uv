@@ -2,6 +2,7 @@
 .devbox
 
 .coverage
+.ipynb_checkpoints
 _version.py
 __pycache__
 *.pyc
