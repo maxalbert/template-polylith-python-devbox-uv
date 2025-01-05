@@ -17,3 +17,4 @@ def cli_entrypoint() -> None:
 
 
 cli_entrypoint.add_command(subcommands.version.print_current_version)
+cli_entrypoint.add_command(subcommands.server.cli_commands_server)
