@@ -1,5 +1,6 @@
 .copier-answers.yml
 .devbox
+.*.swp
 
 .coverage
 .ipynb_checkpoints
