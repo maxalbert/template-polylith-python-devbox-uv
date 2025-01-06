@@ -20,6 +20,7 @@ def test_cli_without_arguments() -> None:
           -h, --help  Show this message and exit.
 
         Commands:
+          server   Commands to run and manage the server.
           version  Print the current version.
         """
     )
@@ -32,3 +33,11 @@ def test_version() -> None:
     result = runner.invoke(cli_entrypoint, "version")
 
     assert result.output.strip() == __version__
+
+
+def test_server_run() -> None:
+    runner = CliRunner()
+    result = runner.invoke(cli_entrypoint, ["server", "run", "--port=8042"])
+
+    expected_output = "Starting server on port 8042"
+    assert result.output.strip() == expected_output
