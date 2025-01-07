@@ -7,7 +7,7 @@ from litestar import Litestar
 from litestar.testing import AsyncTestClient
 
 from {{ pymodule_name }}.logging import configure_structlog
-from {{ pymodule_name }}.server import app
+from {{ pymodule_name }}.api import app
 
 if TYPE_CHECKING:
     from litestar import Litestar

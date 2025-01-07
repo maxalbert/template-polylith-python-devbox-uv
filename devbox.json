@@ -6,7 +6,7 @@
     "treefmt@latest",
   ],
   "env": {
-    "LITESTAR_APP": "{{ pymodule_name }}.server:app",
+    "LITESTAR_APP": "{{ pymodule_name }}.api:app",
   },
   "shell": {
     "init_hook": [

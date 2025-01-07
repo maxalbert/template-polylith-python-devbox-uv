@@ -71,7 +71,7 @@ ignore_missing_imports = true
 
 [tool.polylith.bricks]
 "bases/{{ pymodule_name }}/cli" = "{{ pymodule_name }}/cli"
-"bases/{{ pymodule_name }}/server" = "{{ pymodule_name }}/server"
+"bases/{{ pymodule_name }}/api" = "{{ pymodule_name }}/api"
 "components/{{ pymodule_name }}/logging" = "{{ pymodule_name }}/logging"
 "components/{{ pymodule_name }}/services" = "{{ pymodule_name }}/services"
 "components/{{ pymodule_name }}/version" = "{{ pymodule_name }}/version"
