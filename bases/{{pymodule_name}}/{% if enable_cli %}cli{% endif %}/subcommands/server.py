@@ -1,5 +1,7 @@
 import click
 
+from {{ pymodule_name }}.api import run_api_server
+
 
 @click.group(name="server")
 def cli_commands_server() -> None:
@@ -30,4 +32,4 @@ def run_server(host: str, port: int):
     """
     Start the server process.
     """
-    print(f"Starting server on port {port}")
+    run_api_server(host=host, port=port)

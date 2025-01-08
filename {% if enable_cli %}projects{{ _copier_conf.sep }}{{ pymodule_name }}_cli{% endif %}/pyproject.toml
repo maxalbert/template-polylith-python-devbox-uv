@@ -24,5 +24,6 @@ packages = ["{{ pymodule_name }}"]
 # This section is needed to enable the hook in the build process, even if empty.
 
 [tool.polylith.bricks]
+"../../bases/{{ polylith_namespace }}/api" = "{{ polylith_namespace }}/api"
 "../../bases/{{ polylith_namespace }}/cli" = "{{ polylith_namespace }}/cli"
 "../../components/{{ polylith_namespace }}/version" = "{{ polylith_namespace }}/version"
